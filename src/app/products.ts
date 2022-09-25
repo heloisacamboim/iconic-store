@@ -8,20 +8,27 @@ export interface Product {
 export const products = [
   {
     id: 1,
-    name: 'Lip Gloss',
+    name: 'Batom',
     price: 799,
-    description: 'A large phone with one of the best screens'
+    description: 'Batom vermelho'
   },
   {
     id: 2,
-    name: 'Eyeshadow',
+    name: 'Sombra',
     price: 699,
-    description: 'A great phone with one of the best cameras'
+    description: 'Paleta de sombra para os olhos'
   },
   {
     id: 3,
-    name: 'Lipstick',
+    name: 'Rímel',
     price: 299,
     description: ''
   }
 ];
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/

@@ -1,21 +1,52 @@
-<section class="container">
-  <h1 id="productTitle">Produtos</h1>
+<header>
 
-  <div *ngFor="let product of products">
-    <h3>
+</header>
+
+<h1>Produtos</h1>
+
+<div *ngFor="let product of products" class="produto">
+  <h3>
+    <a [title]="product.name + ' details'">
       {{ product.name }}
+    </a>
   </h3>
-  </div>
 
-  <section>
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <button type="button" (click)="adicionar()">Adicionar ao carrinho</button>
+
+  <app-product-alerts [product]="product" (notify)="onNotify()">
+  </app-product-alerts>
+</div>
+
+<div id="contact">
+  <section id="contact">
     <div>
-      <div id="photos">
-        <img src="images/6225d5d4-02da-42d7-900d-9c76a9a9fca7.jpg">
-        <img src="images/7c628cce-5278-45e2-a016-f13ee35ad820.jpg">
-        <img src="images/102ab042-d807-4cb2-8bf7-0f464972c278.jpg">
-        <img src="images/83a43766-53dc-406c-b616-0c1d5548fdd1.jpg">
-        <img src="images/660ccfcc-2dc0-46ca-9bc6-11ef1e1a11c0.jpg">
-      </div>
-    </div>
+      <h1 class="title">Fale conosco</h1>
 
-</section>
+      <form id="form" enctype="text/plain">
+        Email:<br>
+        <input type="email" name="email" id="email" required placeholder="Entre com email válido."><br>
+        Mensagem:<br>
+        <input type="text" name="comment" id="comment" size="80"><br><br>
+        <input type="submit" name="submit" value="Submit">
+      </form>
+    </div>
+  </section>
+</div>
+
+<div>
+  <footer>
+    <ul>
+      <li><a href="Contato">Contact</a></li>
+      <li><a href="Privacidade">Privacy</a></li>
+      <li><a href="Feedback">Feedback</a></li>
+    </ul>
+  </footer>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
