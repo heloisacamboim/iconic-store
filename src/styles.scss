@@ -1,36 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  align-items: center;
+}
+
+/* Text */
+
 h1 {
-	color: black;
-	text-align: center;
-	font-family: 'Comfortaa', cursive;
-	font-size: 80px;
+  font-family: 'Dangrek', cursive;
+  font-size: 32px;
+  text-align: center;
 }
 
 h2 {
-	color: #e2979c;
-	text-align: center;
-	font-family: 'Spartan', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  font-weight: lighter;
 }
 
 p {
-	text-align: center;
+  font-size: 14px;
 }
 
-header {
-	background-color: #f7f5dd;
-	position: fixed;
-	top: 0;
-	color: black;
-	font-family: 'PT Sans Narrow', sans-serif;
-	padding: 0;
-	width: 100%;
-	height: 150px;
-	min-height: 75px;
-  	padding: 0px 20px;
-  	display: flex;
-  	justify-content: space-around;
-  	align-items: center;
-}
+/* Hyperlink */
 
 a {
   cursor: pointer;
@@ -41,24 +43,82 @@ a:hover {
   opacity: 0.8;
 }
 
-main {
-	margin-top: 250px;
+/* Input */
+
+input {
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
 }
 
-body {
+label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Button */
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #dd31ec;
+  color: white;
+  border: none;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+/* Fancy Button */
+
+.fancy-button {
+  background-color: white;
+  color: #dd31ec;
+}
+
+.fancy-button i.material-icons {
+  color: #dd31ec;
+  padding-right: 4px;
+}
+
+/* Top Bar */
+
+app-top-bar {
+  width: 100%;
+  height: 68px;
+  background-color: #000000;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+app-top-bar h1 {
+  color: white;
   margin: 0;
-  padding: 0%;
 }
 
-#header-img {
-	width: 8em;
- 	height: 8em;
-	margin: 10px;
-}
-
+/*nav-bar*/
 nav ul {
   float: right;
   margin-right: 2em;
+  color: white;
 }
 
 nav li {
@@ -68,51 +128,62 @@ nav li {
   font-size: 20px;
   font-family: 'Cedarville Cursive', cursive;
   font-family: 'Open Sans Condensed', sans-serif;
+  color: white;
 }
 
+
+/* Checkout Cart, Shipping Prices */
+
+.cart-item, .shipping-item {
+  width: 100%;
+  min-width: 400px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 32px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background-color: #EEEEEE;
+}
+
+
+/*Header*/
+
+header {
+  margin-top: 0%;
+  padding-top: 0%;
+  background-image: url(https://images.pexels.com/photos/212236/pexels-photo-212236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  height: 300px;
+  background-size: cover;
+}
+
+/*Footer*/
+
 footer {
-	background-color: #f7f5dd;
-	color: #9bdeac;
+	background-color: #eed6f5;
 	float: right;
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 20px;
 	width: 100%;
+  align-items: center;
 }
 
 footer li {
 	display: inline;
 	display: inline-block;
 	padding: 1em;
-	align-content: left;
+	align-content: center;
 }
 
-#home {
-	padding: 20em;
-	background-color: #111d5e;
-  background-image: url(https://images.pexels.com/photos/212236/pexels-photo-212236.jpeg?cs=srgb&dl=pexels-kinkate-212236.jpg&fm=jpg);
-  background-size: 100%;
-	background-size: cover;
-	display: block;
-	align-items: center;
+/*Produtos*/
+
+.produto {
+  align-items: center;
+  text-align: center;
 }
 
-.centering {
-	align-items: center;
-	padding: 3.5em;
-	margin: auto;
-	width: 50%;
-}
-
-iframe {
-	display: block;
-	border-style: none;
-	margin: 0 auto;
-}
-
-#comment {
-	width: 250px;
-	height: 80px;
-}
+/*Fale conosco*/
 
 form {
 	display: block;
@@ -121,20 +192,14 @@ form {
 	text-align: center;
 }
 
-img {
-	width: 20em;
-
-	margin: 10px;
- }
-
- #photos {
- 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
- }
-
- @media (max-width: 600px) {
- 	#photos {
- 		display: block;
- 	}
+#comment {
+	width: 250px;
+	height: 80px;
 }
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
