@@ -14,13 +14,13 @@ body {
 /* Text */
 
 h1 {
-  font-family: 'Dangrek', cursive;
-  font-size: 32px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 40px;
   text-align: center;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -28,8 +28,16 @@ h1, h2 {
   font-weight: lighter;
 }
 
+#nomeLoja {
+  font-size: 40px;
+}
+
 p {
-  font-size: 14px;
+  font-size: 15px;
+}
+
+.pAbout {
+  font-size: 20px;
 }
 
 /* Hyperlink */
@@ -66,10 +74,10 @@ label {
   display: inline-flex;
   align-items: center;
   padding: 8px 16px;
-  border-radius: 2px;
+  border-radius: 10px;
   font-size: 14px;
   cursor: pointer;
-  background-color: #dd31ec;
+  background-color: #a42aaf;
   color: white;
   border: none;
 }
@@ -88,11 +96,11 @@ label {
 
 .fancy-button {
   background-color: white;
-  color: #dd31ec;
+  color: #a42aaf;
 }
 
 .fancy-button i.material-icons {
-  color: #dd31ec;
+  color: #a42aaf;
   padding-right: 4px;
 }
 
@@ -111,13 +119,12 @@ app-top-bar {
 
 app-top-bar h1 {
   color: white;
-  margin: 0;
+  margin: auto;
 }
 
 /*nav-bar*/
 nav ul {
   float: right;
-  margin-right: 2em;
   color: white;
 }
 
@@ -162,18 +169,17 @@ header {
 
 footer {
 	background-color: #eed6f5;
-	float: right;
 	font-family: 'PT Sans Narrow', sans-serif;
 	font-size: 20px;
 	width: 100%;
-  align-items: center;
+  height: 50px;
+  display: flex;
 }
 
-footer li {
-	display: inline;
-	display: inline-block;
-	padding: 1em;
-	align-content: center;
+.back-to-top {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
 }
 
 /*Produtos*/
@@ -181,12 +187,19 @@ footer li {
 .produto {
   align-items: center;
   text-align: center;
+  margin-bottom: 60px;
 }
+
 
 /*Imagens*/
 img {
   max-width: 300px;
   max-height: 300px;
+}
+
+#about {
+  margin: 100px;
+  padding:100px;
 }
 
 

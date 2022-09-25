@@ -18,10 +18,14 @@ export class ProductListComponent {
     window.alert('Você será notificado quando esse produto voltar para o estoque.');
   }
 
-  clicar() {
-    debugger
-    window.alert('Obrigado pelo contato!')
+  voltarTopo() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+  });
   }
+
 }
 
 /*

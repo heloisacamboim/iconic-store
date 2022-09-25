@@ -4,14 +4,14 @@
 
 <h1>Produtos</h1>
 
-<div *ngFor="let product of products" class="produto" id="product">
+<div *ngFor="let product of products" class="produto" id="products">
   <h3>
     <a [title]="product.name + ' details'">
       {{ product.name }}
     </a>
   </h3>
 
-  <p class="word" *ngIf="product.description">{{ product.description }}</p>
+  <p *ngIf="product.description">{{ product.description }}</p>
 
   <div>
     <img [src]="product.imagePath">
@@ -22,6 +22,15 @@
 
   <app-product-alerts [product]="product" (notify)="onNotify()">
   </app-product-alerts>
+</div>
+
+<div id="about">
+  <h1>Sobre nós</h1>
+  <p class="pAbout">A Iconic Store é uma empresa 100% brasileira que comercializa produtos com a mais alta qualidade
+    e com preço justo. Em nosso e-commerce, você encontra produtos das mais variadas marcas,
+    nosso portfólio conta com mais de 3 mil itens.
+    Trabalhamos com entregas terceirizadas pelos Correios.
+    Em caso de roubos ou extravios por parte da empresa citada, nos responsabilizamos pelo ressarcimento.</p>
 </div>
 
 <div id="contact">
@@ -42,11 +51,11 @@
 
 <div>
   <footer>
-    <ul>
-      <li><a href="Contato">Contact</a></li>
-      <li><a href="Privacidade">Privacy</a></li>
-      <li><a href="Feedback">Feedback</a></li>
-    </ul>
+    <div>
+      <p>Site desenvolvido por Heloísa Martins</p>
+    </div>
+
+    <button (click)="voltarTopo()" class="back-to-top">Voltar ao topo</button>
   </footer>
 </div>
 

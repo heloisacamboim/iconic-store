@@ -15,9 +15,9 @@ export const products = [
   },
   {
     id: 2,
-    name: 'Sombra',
+    name: 'Paleta de Sombras',
     price: 50,
-    description: 'Paleta de sombra para os olhos',
+    description: 'Paleta de sombras com acabamentos matte e cores neutras.',
     imagePath: '/assets/83a43766-53dc-406c-b616-0c1d5548fdd1.jpg'
   },
   {
