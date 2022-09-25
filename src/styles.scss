@@ -217,6 +217,57 @@ form {
 	height: 80px;
 }
 
+/*Responsividade*/
+
+@media (max-width: 767px) {
+	.col-sm-12 {
+		width: 100%;
+		display: inline-block;
+	}
+
+  .hide {
+    display: none;
+  }
+
+  #about {
+    margin: 0px;
+    padding:0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-md-6 {
+		width: 50%;
+		display: inline-block;
+	}
+	.col-md-12 {
+		width: 100%;
+		display: inline-block;
+	}
+
+  #about {
+    margin: 0px;
+    padding:0px;
+  }
+
+  .hide {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+	.col-lg-4 {
+		width: 33%;
+		display: inline-block;
+	}
+
+  #about {
+    margin: 0px;
+    padding:0px;
+    width: auto;
+  }
+}
+
 
 /*
 Copyright Google LLC. All Rights Reserved.
